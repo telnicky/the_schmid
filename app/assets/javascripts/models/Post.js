@@ -1,5 +1,6 @@
 define([], function() {
-
+  urlRoot: '/posts',
+  
   var Post = Backbone.Model.extend({
     defaults: {
       'feedback': '',
