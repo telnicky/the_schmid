@@ -1,15 +1,4 @@
 $(function () {
-  require(
-    ['collections/Posts',
-     'models/Post',
-     'views/PostsListView', 
-     'views/PostItemView'],
-
-    function ( Posts, 
-               Post, 
-               PostsListView, 
-               PostItemView) {
-      
       // instantiate data
       var posts = new Posts(window.jsonData);
         
@@ -19,7 +8,8 @@ $(function () {
         collection: posts                
       });
 
+      // var test = "<span>hello world</span>"
       // insert into page
       $('.main').append(postsListView.el);      
-  })
+      // $('.main').append(test);      
 });

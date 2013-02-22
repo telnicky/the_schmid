@@ -1,4 +1,4 @@
-define(['models/post'], function (post) {
+
   var PostItemView = Backbone.View.extend({
     
     constructor: function AppointmentItemView () {
@@ -7,7 +7,7 @@ define(['models/post'], function (post) {
 
     initialize: function () {
       var that = this;
-      this.post = new Post({id: this.model.get('post_id')});
+      this.post = new Post({id: this.model.get('id')});
       this.post.fetch({
         success: function (model, response) {
           console.log('Fetch Succeeeeeeeeeded');
@@ -29,5 +29,4 @@ define(['models/post'], function (post) {
     }
 
   });
-  return PostItemView;
-});
+

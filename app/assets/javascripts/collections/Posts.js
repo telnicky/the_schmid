@@ -1,11 +1,7 @@
-define(['models/Post'], function(post) {
-  var posts = Backbone.Collection.extend({
-    model: post,    
+var Posts = Backbone.Collection.extend({
+  model: Post,    
 
-    initialize: function () {
-      // this.on('change:status', this.onChangeStatus, this);
-    }
-  });
-
-  return posts;
+  initialize: function () {
+    // this.on('change:status', this.onChangeStatus, this);
+  }
 });

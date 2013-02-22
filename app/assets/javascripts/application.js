@@ -14,7 +14,10 @@
 //= require underscore
 //= require backbone
 //= require jquery_ujs
+//= require models/Post
+//= require collections/Posts
+//= require views/PostItemView
+//= require views/PostsListView
+//= require main
 
 
-
-var a = "hello";

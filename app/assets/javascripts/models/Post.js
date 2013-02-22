@@ -1,14 +1,9 @@
-define([], function() {
+var Post = Backbone.Model.extend({
   urlRoot: '/posts',
-  
-  var Post = Backbone.Model.extend({
-    defaults: {
-      'feedback': '',
-      'vote': 0,
-      'created_at': ''
-      
-    }
-  });
-
-  return Post;
+  defaults: {
+    'feedback': '',
+    'vote': 0,
+    'created_at': ''
+    
+  }
 });
