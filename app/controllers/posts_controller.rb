@@ -2,8 +2,7 @@ class PostsController < ApplicationController
   respond_to :json
 
   def index
-    @posts = Post.all
-    # respond_with @posts
+    @posts = Post.all    
   end
 
   def create
