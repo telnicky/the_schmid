@@ -11,8 +11,10 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require underscore
+//= require backbone
 //= require jquery_ujs
-//= require_tree .
+
 
 
 var a = "hello";
