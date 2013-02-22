@@ -5,6 +5,22 @@ define(['models/post'], function (post) {
       Backbone.View.apply(this , arguments);
     },
 
+
+    template: _.template(
+      "<div class='post_head'>
+         <input class='up-vote' type='submit' name='vote' value='up' title='Vote up'>
+         <span>(<%= vote_count %>)</span>
+         <span> -- </span>
+         <span><%= time_stamp %></span>
+       </div>
+
+       <div class='post_body'>
+         <%= feedback_text %>
+       </div>
+
+       <div class='thin-divide' />
+      "),
+
     initialize: function () {
       var that = this;
       this.post = new Post({id: this.model.get('post_id')});
@@ -23,7 +39,9 @@ define(['models/post'], function (post) {
     
     render: function () {
       this.$el.html(
-        '<span>post_item_view</span>'
+        this.template({vote_count : post.get("vote")},
+                      {time_stamp : post.get("created_at")},
+                      {feedback_text : post.get("feedback")})
       );
       this.$el.attr('id', this.model.get('id'));      
     }
